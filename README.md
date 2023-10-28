@@ -1,2 +1,2 @@
-# LLMFunctions-NewsWeatherChat
-Building a News/Weather ChatBot in an effort to experiment with LLM function calls
+# LLMFunctions-NewsChat
+Building a News ChatBot in an effort to experiment with LLM function calls
