@@ -1,0 +1,85 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f6f6f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Viewport height, makes sure the body takes the full screen */
+}
+
+#chatbox {
+    width: 90%; /* Taking up 80% of screen width */
+    /* max-width: 800px; /* Max width to ensure readability */
+    height: 90%; /* Taking up 80% of screen height */
+    /* max-height: 600px; /* Max height */
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+#messages {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto; /* To ensure scrolling when messages overflow */
+    border-bottom: 1px solid #e0e0e0;
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.message {
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    max-width: 1000px;
+    font-size: 20px;
+}
+
+.user-msg {
+    background-color: #e0e0e0;
+    align-self: flex-center;
+}
+
+.sys-msg {
+    background-color: #d1e7dd;
+    align-self: flex-start;
+}
+
+.thinking-msg {
+    background-color: #e19393;
+    align-self: flex-start;
+}
+
+.citations-msg{
+    background-color: #e6f2ea;
+    align-self: flex-start;
+    font-size: 18px;
+}
+
+input[type="text"] {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    margin: 15px;
+    width: 60%; /* Subtracting the margins */
+    font-size: 20px;
+}
+
+button {
+    padding: 20px 25px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 15px;
+    align-self: flex-start;
+    font-size: 22px;
+}

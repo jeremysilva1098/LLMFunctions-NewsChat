@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <title>News Chat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styleB.css') }}">
+</head>
+<body>
+    <div id="chatbox">
+        <h1 style="font-size: 36px; font-weight: bold; text-align: center; margin-top: 20px;">NewsChat</h1> <!-- Add formatting to the title -->
+        <div id="messages">
+            <div class="message sys-msg">Welcome to News Chat! What can I help you with today?</div>
+        </div>
+        <input type="text" id="userInput" placeholder="Send a message">
+        <button id="sendButton">Send</button>
+    </div>
+    <script src="{{ url_for('static', filename='chat.js') }}"></script>
+</body>
+</html>
+
