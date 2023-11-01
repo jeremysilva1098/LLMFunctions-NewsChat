@@ -5,8 +5,8 @@ from functions import functions
 import helper_funcs as hfuncs
 import json
 import requests
-from datetime import datetime, date
-from typing import Optional
+from datetime import date , timedelta
+from typing import Optional, Tuple, Dict
 
 load_dotenv()
 
@@ -28,7 +28,7 @@ class ChatSession:
         self.news_url_headlines = "https://newsapi.org/v2/top-headlines"
         self.news_key = os.getenv("NEWS_API_KEY")
         # get the date to use for the news funcs
-        self.week_ago = date.today().replace(day=date.today().day-7).strftime("%Y-%m-%d")
+        self.week_ago = (date.today() - timedelta(days=7)).strftime("%Y-%m-%d")
 
     
     def trim_messages(self) -> None:
@@ -38,7 +38,7 @@ class ChatSession:
             self.messages.pop(1)
 
 
-    def news_keyword_func(self, keyword: str, limit: int = 15) -> str:
+    def news_keyword_func(self, keyword: str, limit: int = 15) -> Tuple[str, dict]:
         params = {
             'q': keyword,
             'apiKey': self.news_key,
@@ -61,7 +61,7 @@ class ChatSession:
         return articlesText, citations
     
 
-    def news_topic_func(self, topic: str, limit: int = 15) -> str:
+    def news_topic_func(self, topic: str, limit: int = 15) -> Tuple[str, dict]:
         params = {
             'apiKey': self.news_key,
             'country': 'us',
@@ -85,7 +85,7 @@ class ChatSession:
         return articlesText, citations
         
 
-    def execute_function(self, function_call) -> str:
+    def execute_function(self, function_call) -> Tuple[str, dict]:
         funcName = function_call['name']
         args = json.loads(function_call['arguments'])
         if funcName == 'get_news_by_keyword':
