@@ -7,5 +7,5 @@ This enables both real time information as well as transparent citations of unde
 
 Here is a video of the primary user interace.
 
-https://github.com/jeremysilva1098/LLMFunctions-NewsChat/assets/58676494/b9d11383-8431-4e9e-a66c-02db2380c3d5
+https://github.com/jeremysilva1098/LLMFunctions-NewsChat/assets/58676494/c5af2219-dd65-4577-88e1-2b5ba6a90ceb
 
